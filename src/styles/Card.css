@@ -1,0 +1,239 @@
+.card {
+  display: grid;
+  grid-template-columns: 180px auto 17% 16% 11% 5%;
+  background: var(--dark);
+  height: 180px;
+}
+.card__img {
+  width: 180px;
+  height: 180px;
+}
+.card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card__main {
+  align-self: center;
+  padding: 0 20px 0 70px;
+}
+.card__title {
+  font-size: 20px;
+  line-height: 120%;
+  margin-bottom: 6px;
+  display: block;
+}
+.card__description {
+  font-size: 15px;
+  line-height: 120%;
+  color: var(--gray-text);
+  display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+  max-height: 36px;
+}
+.card__weight {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 3px 6px;
+  background: #4D4D4D;
+  border-radius: 3px;
+}
+.card__price, .card__sum {
+  align-self: center;
+  padding: 0 20px 0 0;
+  font-size: 23px;
+  line-height: 120%;
+  font-weight: 900;
+  white-space: nowrap;
+}
+.card__quantity {
+  align-self: center;
+  padding: 0 20px 0 0;
+}
+.card__quantity-container {
+  width: 81px;
+  height: 42px;
+  position: relative;
+  border: 1px solid var(--gray-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card__quantity-handle {
+  width: 22px;
+  height: 22px;
+  background: #000;
+  border: none;
+  position: absolute;
+  top: 10px;
+  right: -12px;
+  color: var(--light-text);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  font-size: 22px;
+  cursor: pointer;
+}
+.card__quantity-handle:last-child {
+  right: initial;
+  left: -12px;
+}
+.card__quantity-handle:hover {
+  color: var(--yellow);
+}
+.card__quantity-handle[disabled] {
+  color: var(--gray-text);
+  cursor: initial;
+}
+.card__quantity-value {}
+.card__sum {}
+.card__delete {
+  align-self: center;
+  padding: 0 20px 0 0;
+}
+.card__delete-button {
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--red);
+  background: none;
+  position: relative;
+}
+.card__delete-button:hover {
+  border: 1px solid var(--red-hover);
+}
+.card__delete-button::after, .card__delete-button::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  width: 20px;
+  height: 1.5px;
+  background: var(--red);
+}
+.card__delete-button:hover::after, .card__delete-button:hover::before {
+  background: var(--red-hover);
+}
+.card__delete-button::before {
+  transform: rotate(45deg);
+}
+.card__delete-button::after {
+  transform: rotate(-45deg);
+}
+@media (max-width: 1599px) {
+  .card {
+    grid-template-columns: 180px auto 13% 13% 16% 7%;
+  }
+  .card__main {
+    padding: 0 20px 0 33px;
+    overflow: auto;
+  }
+}
+
+@media (max-width: 1023px) {
+  .card {
+    grid-template-columns: 120px auto 13% 17% 13% 5%;
+    height: 120px;
+  }
+  .card__img {
+    width: 120px;
+    height: 120px;
+  }
+  .card__main {
+		padding: 0 10px 0 22px;
+		overflow: auto;
+	}
+  .card__title {
+    font-size: 17px;
+  }
+  .card__quantity {
+    padding: 0 10px 0 0;
+  }
+  .card__price, .card__sum {
+    padding: 0 10px 0 0;
+  }
+  .card__delete {
+    align-self: start;
+    justify-self: end;
+    padding: 0;
+  }
+  .card__delete-button {
+    width: 30px;
+    height: 30px;
+  }
+  .card__delete-button::after, .card__delete-button::before {
+    top: 15px;
+    left: 7px;
+    width: 15px;
+    height: 1px;
+  }
+}
+
+@media (max-width: 767px) {
+  .card {
+    grid-template-columns: 3fr 5fr 3fr 1fr;
+    height: initial;
+    padding: 12px 12px;
+    gap: 8px;
+  }
+  .card__img {
+		display: none;
+	}
+  .card__main {
+    grid-column: 1 / span 3;
+		padding: 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    align-items: start;
+    gap: 4px 8px;
+  }
+  .card__title {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0;
+		font-size: 15px;
+  }
+  .card__weight {
+    margin-top: 0;
+    grid-column: 1;
+    grid-row: 1;
+		font-size: 11px;
+		padding: 2px 5px;
+  }
+  .card__description {
+    grid-column: span 2;
+    grid-row: 2;
+		font-size: 12px;
+  }
+  .card__price {
+    grid-column: 1;
+    grid-row: 2;
+		padding: 0;
+    justify-self: start;
+		font-size: 17px;
+  }
+  .card__quantity {
+    grid-column: 2;
+    grid-row: 2;
+		padding: 0;
+    justify-self: center;
+  }
+  .card__sum {
+    grid-column: 3;
+    grid-row: 2;
+		padding: 0;
+    justify-self: end;
+		font-size: 17px;
+  }
+  .card__label {
+    font-size: 10px;
+    color: var(--gray-text);
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .card__delete {
+		margin: -12px -12px 0 0;
+	}
+}
