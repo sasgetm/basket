@@ -168,6 +168,10 @@ textarea {
   margin: 0; /* 2 */
 
   cursor: pointer;
+  border-radius: 0;
+  -webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 }
 
 /**
@@ -313,7 +317,7 @@ textarea {
 }
 
 /* Interactive
-   ========================================================================== */
+   ==========================f================================================ */
 
 /*
  * Add the correct display in Edge, IE 10+, and Firefox.

@@ -43,7 +43,7 @@ function Header(props) {
               <div className="header__mobile-menu-icon-el header__mobile-menu-icon-el_two"></div>
               <div className="header__mobile-menu-icon-el header__mobile-menu-icon-el_three"></div>
             </div>
-            
+
             <span className="header__mobile-menu-text mobile-none">{isMobileMenuOpen ? 'закрыть' : 'меню'}</span>
           </div>
         </div>
@@ -129,7 +129,7 @@ function Header(props) {
 
         <div className="header__functions">
           <div className={`header__functions-button header__functions-search ${isMobileMenuOpen ? 'header__mobile-menu_open' : ''}`}>
-            <input className="input-text header__functions-search-input" type="text" placeholder="Поиск блюда"/>
+            <input className="input-text header__functions-search-input" type="search" placeholder="Поиск блюда"/>
             <div className="header__functions-icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M9.10932 18.2186C14.1403 18.2186 18.2186 14.1402 18.2186 9.10931C18.2186 4.07838 14.1403 0 9.10932 0C4.07834 0 0 4.07838 0 9.10931C0 14.1402 4.07834 18.2186 9.10932 18.2186ZM9.10932 16.0752C12.9565 16.0752 16.0753 12.9565 16.0753 9.10931C16.0753 5.26212 12.9565 2.14337 9.10932 2.14337C5.26214 2.14337 2.14337 5.26212 2.14337 9.10931C2.14337 12.9565 5.26214 16.0752 9.10932 16.0752Z" fill="white"/>
